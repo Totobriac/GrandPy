@@ -17,14 +17,32 @@
             <img src="{{url_for('static', filename='images/robot.png')}}" style="width:150px;height:150px;">
             <h1> Grandpy Bot</h1>
             <h2 class="small_text">Le robot qui sait tout!</h2>
+            
         </div>
     </header>
 
-    <div id="chatbox">  
-        
-    </div>   
+    <div class = 'overlay'>
+        <div class="gears">
+           <img src="https://goo.gl/fpC7Oh" class="big">
+           <img src="https://goo.gl/qL1pnV" class="small">
+           <img src="https://goo.gl/qL1pnV" class="medium">
+           <img src="https://goo.gl/qL1pnV" class="small">
+           <img src="https://goo.gl/qL1pnV" class="medium"> 
+           <img src="https://goo.gl/qL1pnV" class="big">
+           <img src="https://goo.gl/qL1pnV" class="huge">        
+         </div>
+    </div>
 
-        <div id="questionary">
+    <div id="parent">
+        <div id="chatbox">                                     
+        </div> 
+        <div id="waitScreen">
+        <img src="{{url_for('static', filename='images/roboteyeslower.gif')}}" class = "robot">  
+        </div> 
+    </div>
+                 
+       
+     <div id="questionary">
                 <form action='/process' method="POST" autocomplete="off" id='user_form'>
                     <div>
                         <input type="text" name="question" id="question" placeholder="Une question?">
@@ -33,14 +51,14 @@
                 </form>
         </div>
 
-        <footer>
-            <div id="footer">
-                <p>Vincent Cailly</p>
-                <a href="https://github.com/Totobriac" target="_blank">
-                    <img src="{{url_for('static', filename='images/github_white.png')}}" alt="github Icon" style="width:36px;height:36px;">
-                </a>
-            </div>
-        </footer>
+    <footer>
+        <div id="footer">
+            <p>Vincent Cailly</p>
+            <a href="https://github.com/Totobriac" target="_blank">
+                <img src="{{url_for('static', filename='images/github_white.png')}}" alt="github Icon" style="width:36px;height:36px;">
+            </a>
+        </div>
+    </footer>
 
 </body>
 

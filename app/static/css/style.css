@@ -1,10 +1,8 @@
-body
-{
+body {
     background-color:#f0f4f5;       
 }
 
-h1
-{
+h1 {
     color: grey;
     font-size: 4em;
     border: 1px solid black double;
@@ -14,8 +12,7 @@ h1
     font-family: "roboto";     
 }
 
-h2
-{
+h2 {
     color: rgb(54, 53, 53);
     font-size: 2em;
     font-family: "roboto";
@@ -23,38 +20,39 @@ h2
     padding : 0px;
 }
 
-#chatbox
-{
+#chatbox {
     width: 70%;
     height: 550px; 
     margin: auto; 
     border-style: double;
     text-align: justify;
     padding: 12px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     object-fit: contain;
     background-color: grey;
-    border-radius: 15px;   
+    border-radius: 15px; 
+    /* position: absolute; */
+    z-index: 2;    
+    left: 15%;
+    
 }
 
-#conteneur
-{
+#conteneur{
     display: flex;    
     align-items: flex-start;
     padding: 10px;
 }
 
-#footer
-{
+#footer{
     display: flex;
     justify-content: center;
     background-color: grey;
     color: white;
-    margin-top: 120px;     
+    margin-top: 120px;       
 }
 
 @font-face {
@@ -73,7 +71,7 @@ h2
 }
 
 .small_text {
-    margin-left: 26%;
+    margin-left: 28%;
 }
 
 #btn {
@@ -92,7 +90,8 @@ h2
 }
 
 #questionary {    
-    text-align: center
+    text-align: center;
+    margin-top: 15px ;    
 }
 
 #img {
@@ -118,4 +117,90 @@ h2
 .pictures{
     display: flex;
     justify-content: space-between;
+}
+
+.gears {    
+    width: 550px;
+    margin-bottom: -160px;
+    margin-right: 8%;      
+}
+ 
+.huge {  
+    width: 120px;
+    height: 120px;
+    margin-top: -7px;
+    margin-left: 70%;
+    filter: invert(50%);     
+}
+ 
+.big {
+    width: 100px;
+    height: 100px;
+    margin-left: -6px;
+    filter: invert(25%);  
+}
+ 
+.medium {
+    width: 85px;
+    height: 85px;
+    margin-left: -6px;
+    filter: invert(55%);    
+}
+ 
+.small {
+    width: 70px;
+    height: 70px;
+    margin-left: -6px;
+    filter: invert(70%);   
+}
+ 
+@keyframes rotate {
+    0% { transform: rotate(0);}
+    100% { transform: rotate(180deg);}
+}
+
+@keyframes reverseRotate {
+    0% { transform: rotate(180deg);}
+    100% { transform: rotate(0);}
+}
+
+.overlay {    
+    display: flex; 
+    justify-content: flex-end;
+    margin-top: -70px;
+}
+.rotate {
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite
+}
+
+.reverseRotate {
+    transform-origin: center;   
+    animation: reverseRotate 2s linear infinite;
+}
+
+#waitScreen {
+    position:absolute;
+    display: none;
+    background: rgba(255,255,255,0.85); 
+    width: 70%;
+    z-index: 1000;
+    border-radius: 15px;
+    left: 15%;
+    height: 550px;
+    top: 15px;
+    
+}
+
+#parent {
+    position: relative;
+}
+
+.robot{
+    width:500px;
+    height:500px;
+    right: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
