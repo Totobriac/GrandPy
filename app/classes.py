@@ -9,7 +9,7 @@ class user_input ():
 
     def parser(self):
         self.lower_case = self.question.lower()
-        self.splitted_text = re.split('[? ; , \' . : ' ' " "]',self.lower_case)
+        self.splitted_text = re.split('[- ? ; , \' . : ' ' " "]',self.lower_case)
         print (self.splitted_text)
         self.parsed_question = []        
         for i in self.splitted_text:

@@ -669,7 +669,13 @@ stop_words = [
     "mamie",
     "semaine",
     "espère",
-    "avance"      	
+    "avance",
+    "raconte",
+    "veux",
+    "savoir",
+    "maman",
+    "voir"
+
 ]
 
 api_key = "AIzaSyCGmIAISNa4W8KK24eXmH-ly_5k_vpAsos"
