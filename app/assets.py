@@ -640,8 +640,10 @@ stop_words = [
     "connais",
     "connaissez",
     "l",
-    "m"
-    "n"
+    "m",
+    "n",
+    "toi",
+    "mami",    	
 ]
 
 api_key = "AIzaSyCGmIAISNa4W8KK24eXmH-ly_5k_vpAsos"
