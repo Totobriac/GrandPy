@@ -9,11 +9,11 @@ class user_input ():
 
     def parser(self):
         self.lower_case = self.question.lower()
-        self.splitted_text = re.split('[? ; , \' : ' ' " "]',self.lower_case)
+        self.splitted_text = re.split('[? ; , \' . : ' ' " "]',self.lower_case)
         print (self.splitted_text)
         self.parsed_question = []        
         for i in self.splitted_text:
-            if i not in stop_words:
+            if i not in stop_words and i != '':
                 alphanumeric = ""
                 for character in i:
                     if character.isalnum():
