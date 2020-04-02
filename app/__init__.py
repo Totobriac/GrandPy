@@ -25,15 +25,14 @@ def process():
         new_question.get_wiki_content()
         wiki_data = new_question.wiki_data
         new_question.get_wiki_picture()
-        wiki_pic = new_question.wiki_pic
+        wiki_pic = new_question.wiki_pic            
         return jsonify(
             {'response': pic_map, 'user_question': user_question,
                 'wiki_data': wiki_data, 'wiki_pic': wiki_pic})
 
-    except IndexError:
-        return jsonify(
-            {'bad_request': "Mes circuits sont oxydés" +
-                ", je ne comprend pas ta question.."})
+    except (IndexError, TypeError):
+        print ('FAIL!!')       
+        return jsonify({'user_question': "Mes circuits sont oxydés, je ne comprend pas ta question.."})
 
 if __name__ == '__main__':
     app.run(debug=True)

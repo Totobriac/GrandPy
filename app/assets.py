@@ -610,7 +610,7 @@ stop_words = [
     "trouve",
     "est",
     "trop",
-    "hey",
+    "hconey",
     "salut",
     "bonjour",
     "papi",
@@ -634,7 +634,14 @@ stop_words = [
     "emplacement",
     "plz",
     "svp",
-    "aller"
+    "aller",
+    "sais",
+    "savez",
+    "connais",
+    "connaissez",
+    "l",
+    "m"
+    "n"
 ]
 
 api_key = "AIzaSyCGmIAISNa4W8KK24eXmH-ly_5k_vpAsos"

@@ -1,6 +1,6 @@
 from .assets import stop_words, api_key
 import requests
-
+import re
 
 class user_input ():
 
@@ -9,8 +9,9 @@ class user_input ():
 
     def parser(self):
         self.lower_case = self.question.lower()
-        self.  splitted_text = self.lower_case.split()
-        self.parsed_question = []
+        self.splitted_text = re.split('[; , \' : ' ' " "]',self.lower_case)
+        print (self.splitted_text)
+        self.parsed_question = []        
         for i in self.splitted_text:
             if i not in stop_words:
                 alphanumeric = ""
