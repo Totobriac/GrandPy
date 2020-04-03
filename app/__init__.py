@@ -7,19 +7,11 @@ app = Flask(__name__)
 
 
 @app.route('/')
-"""
-    Main page endpoint    
-"""
-
 def homepage():
     return render_template('main.html')
 
 
 @app.route('/process', methods=['POST'])
-"""
-    route to connect with AJAX    
-"""
-
 def process():
     user_question = request.form['question']
     try:
