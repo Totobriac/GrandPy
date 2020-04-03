@@ -1,5 +1,9 @@
 divx = document.getElementById("#chatbox");
 
+
+/**
+ * on ajaxSart, makes the gears rotate. 
+ */
 $(document).ajaxStart(function () {
     $("#waitScreen").fadeIn('slow');
     $(".big").addClass("rotate");
@@ -8,6 +12,9 @@ $(document).ajaxStart(function () {
     $(".huge").addClass("reverseRotate");    
 });
 
+/**
+ * AJAX that sends ('#question') to the backend
+ */
 $(document).ready(function() {
     $('form').on('submit', function(event) {
            
@@ -18,7 +25,9 @@ $(document).ready(function() {
             type : 'POST',
             url : '/process'
            })
-  
+/**
+ * When the backend returns the datas it displays it. 
+*/    
     .done(function(data) {
         if (data['user_question'] != "Mes circuits sont oxydés, je ne comprend pas ta question..") {
             var loaded = 0;                          
