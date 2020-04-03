@@ -674,7 +674,15 @@ stop_words = [
     "veux",
     "savoir",
     "maman",
-    "voir"
+    "voir",
+    "dis",
+    "voudrais",
+    "connaitre",
+    "si",
+    "il",
+    "te",
+    "plait",
+    "plais"
 
 ]
 
