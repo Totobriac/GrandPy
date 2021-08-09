@@ -137,8 +137,7 @@ h2 {
     width: 100px;
     height: 100px;
     margin-left: -6px;
-    filter: invert(25%);
-    background-color: white;
+    filter: invert(25%);    
 }
  
 .medium {
